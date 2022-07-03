@@ -2,7 +2,8 @@ body {
   background-image: url(../images/clima5.gif);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 87rem;
+  background-size: 100vw;
+  background-position-y:1%;
 }
 .App {
   text-align: center;
