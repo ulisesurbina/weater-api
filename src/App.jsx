@@ -27,7 +27,7 @@ function App() {
 
   const convertTemperature = () => {
     if (isFahrenheit) {
-      setTemperature(temperature * 1.8 + 32);
+      setTemperature((temperature * 1.8) + 32);
       setIsFahrenheit(false);
     } else {
       setTemperature((temperature - 32) / 1.8);
