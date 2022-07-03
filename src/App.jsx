@@ -36,10 +36,14 @@ function App() {
   };
   // let date = new Date();
   // let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-  // let hora = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+  // let hour = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 
   return (
     <>
+      <div className="LoaderContainer">
+        <div className="Loader"></div>
+      </div>
+      
       <div className="App">
         <div>
           <h1>Weater-App</h1>
