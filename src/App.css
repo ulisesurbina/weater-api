@@ -1,26 +1,36 @@
 body {
-  background-image: url(../images/clima5.gif);
-  background-position: center;
-  background-size: 87rem;
+  background-image: url(../images/clima1.gif);
+  /* background-position: center; */
+  background-size: 27rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .App {
   text-align: center;
   border-radius: 3rem;
   box-shadow: 4 4 4;
-  width: 30rem;
-  padding: 2rem;
+  max-width: 80%;
+  padding: 10%;
   display: flex;
-  margin: 2rem auto;
+  margin: 1rem auto;
   display: block;
-  background-color: #87CEFA;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  opacity: 85%;
+  justify-content: center;
+  background-color: #f2f0f080;
+  opacity: 80%;
 }
 .Container {
   display: flex;
 }
 .App img {
-  height: 14rem;
+  height: auto;
+}
+.App i {
+  color:#B23A4C;
+}
+.App span {
+  color:#f80000;
+}
+.DataContainer h6{
+  font-size: 1rem;
 }
 .Loader {
   position: fixed;
@@ -31,4 +41,45 @@ body {
   z-index: 9999;
   background: url('../images/carga.gif') 50% 50% no-repeat black;
   opacity: .8;
+}
+
+@media only screen and (min-width: 500px) {
+  .App img {
+    height: 10rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .App img {
+    height: 13rem;
+  }
+  .Container {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .App img {
+    height: 19rem;
+  }
+  .DataContainer h6{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .App {
+    padding:3%;
+  }
+  .App img {
+    height: 19rem;
+    opacity: 100%;
+  }
+  .DataContainer h6{
+    font-size: 1.5rem;
+  }
+  .App button {
+    padding: 0.3rem 3rem;
+    font-size: 2rem;
+  }
+  .App h3, h1 {
+    font-size: 1.5rem;
+  }
 }

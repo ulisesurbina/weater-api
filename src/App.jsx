@@ -53,24 +53,24 @@ function App() {
       <div className="App">
         <div>
           <h1>Weater-App</h1>
-          <h3>{data.name}, {data.sys?.country}</h3>
+          <h3><span>{data.name}, {data.sys?.country}</span></h3>
         </div>
         <div className="Container">
           <div>
             <img src={`http://openweathermap.org/img/wn/${data.weather?.[0].icon}@2x.png`} alt="imageWeather" />
           </div>
-          <div>
-            <h6>"{data.weather?.[0].description}"</h6>
-            <h6><i className="fas fa-wind" aria-hidden="true"></i> Wind Speed: {data.wind?.speed}</h6>
-            <h6><i className="fa-solid fa-cloud"></i> Clouds: {data.clouds?.all}%</h6>
-            <h6><i className="fas fa-temperature-high" aria-hidden="true"></i> Pressure: {data.main?.pressure} hPa</h6>
-            <h6><i className="fa-solid fa-temperature-arrow-up"></i> Temperature max: {Math.round(data.main?.temp_max)}°C</h6>
-            <h6><i className="fa-solid fa-temperature-arrow-down"></i> Temperature min: {Math.round(data.main?.temp_min)}°C</h6>
+          <div className="DataContainer">
+            <h6><span>"{data.weather?.[0].description}"</span></h6>
+            <h6><i className="fas fa-wind" aria-hidden="true"></i> <span>Wind Speed:</span> {data.wind?.speed}</h6>
+            <h6><i className="fa-solid fa-cloud"></i> <span>Clouds:</span> {data.clouds?.all}%</h6>
+            <h6><i className="fas fa-temperature-high" aria-hidden="true"></i> <span>Pressure:</span> {data.main?.pressure} hPa</h6>
+            <h6><i className="fa-solid fa-temperature-arrow-up"></i> <span>Temperature max:</span> {Math.round(data.main?.temp_max)}°C</h6>
+            <h6><i className="fa-solid fa-temperature-arrow-down"></i> <span>Temperature min:</span> {Math.round(data.main?.temp_min)}°C</h6>
           </div>
         </div>
         <div>
           <h3>{dateDay} {hour}</h3>
-          <h3>Temperature: {Math.round(temperature)} {isFahrenheit ? "°C" : "°F"}</h3>
+          <h3><span>Temperature: {Math.round(temperature)} {isFahrenheit ? "°C" : "°F"}</span></h3>
         </div>
         <button type="button" className="btn btn-danger" onClick={convertTemperature}>°C / °F</button>
       </div>
