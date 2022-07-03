@@ -22,8 +22,18 @@ function App() {
     navigator.geolocation.getCurrentPosition(success);
   }, []);
 
-  console.log(data);
-  console.log(temperature);
+  // console.log(data);
+  // console.log(temperature);
+
+  let date = new Date();
+  let dateDay =
+    String(date.getDate()).padStart(2, "0") +
+    "/" +
+    String(date.getMonth() + 1).padStart(2, "0") +
+    "/" +
+    date.getFullYear();
+  let hour =
+    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
   const convertTemperature = () => {
     if (isFahrenheit) {
@@ -41,7 +51,6 @@ function App() {
   return (
     <>
       <div className="App">
-        
         <div>
           <h1>Weater-App</h1>
           <h3>{data.name}, {data.sys?.country}</h3>
@@ -60,7 +69,7 @@ function App() {
           </div>
         </div>
         <div>
-          <h3></h3>
+          <h3>{dateDay} {hour}</h3>
           <h3>Temperature: {Math.round(temperature)} {isFahrenheit ? "°C" : "°F"}</h3>
         </div>
         <button type="button" className="btn btn-danger" onClick={convertTemperature}>°C / °F</button>
