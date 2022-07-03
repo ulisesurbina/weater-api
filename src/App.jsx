@@ -15,7 +15,7 @@ function App() {
         .get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=117cf2c14ca4833f77d08efd905f65c7&units=metric`)
         .then((res) => {
           setData(res.data);
-          setTemperature(Math.round(res.data.main.temp));
+          setTemperature(res.data.main.temp);
         });
     }
 
@@ -34,9 +34,9 @@ function App() {
       setIsFahrenheit(true);
     }
   };
-  let date = new Date();
-  let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-  let hora = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+  // let date = new Date();
+  // let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+  // let hora = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 
   return (
     <>
