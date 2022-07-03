@@ -1,0 +1,25 @@
+body {
+  background-image: url(../images/clima5.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 87rem;
+}
+.App {
+  text-align: center;
+  border-radius: 3rem;
+  box-shadow: 4 4 4;
+  width: 30rem;
+  padding: 2rem;
+  display: flex;
+  margin: 2rem auto;
+  display: block;
+  background-color: #87CEFA;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 85%;
+}
+.Container {
+  display: flex;
+}
+.App img {
+  height: 14rem;
+}
