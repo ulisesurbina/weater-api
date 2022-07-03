@@ -60,7 +60,7 @@ function App() {
         </div>
         <div>
           <h3></h3>
-          <h3>Temperature: {temperature} {isFahrenheit ? "°C" : "°F"}</h3>
+          <h3>Temperature: {Math.round(temperature)} {isFahrenheit ? "°C" : "°F"}</h3>
         </div>
         <button type="button" className="btn btn-danger" onClick={convertTemperature}>°C / °F</button>
       </div>
