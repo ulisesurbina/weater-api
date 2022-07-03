@@ -40,10 +40,6 @@ function App() {
 
   return (
     <>
-      <div className="LoaderContainer">
-        <div className="Loader"></div>
-      </div>
-      
       <div className="App">
         <div>
           <h1>Weater-App</h1>

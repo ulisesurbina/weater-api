@@ -3,7 +3,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100vw;
-  background-position-y:1%;
 }
 .App {
   text-align: center;
@@ -23,52 +22,4 @@ body {
 }
 .App img {
   height: 14rem;
-}
-.LoaderContainer {
-background-color: #8C8C8C;
-position: fixed;
-width: 100vw;
-height: 100vh;
-z-index: 99999;
-transition: all 3s;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.Loader,
-.Loader:before,
-.Loader:after{
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
-  animation: Loader 1.5s infinite ease-in-out;
-}
-.Loader{
-  color:blue;
-  font-size: 13px;
-  position: relative;
-  animation-delay: -0.16s;
-}
-.Loader:before,
-.Loader:after{
-  content: '';
-  position: absolute;
-  top: 0;
-}
-.Loader:before {
-  left:-3.5em;
-  animation-delay: -0.32s;
-}
-.Loader:after {
-  left: 3.5em;
-}
-@keyframes Loader{
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
-  }
 }
