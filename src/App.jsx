@@ -41,6 +41,7 @@ function App() {
   return (
     <>
       <div className="App">
+        
         <div>
           <h1>Weater-App</h1>
           <h3>{data.name}, {data.sys?.country}</h3>
